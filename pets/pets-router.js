@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
     Pets.findById(id)
         .then(pet => {
             if (pet) {
-                res.json(scheme);
+                res.json(pet);
             } else {
                 res.status(404).json({ message: 'Could not find pet with given id.' })
             }
@@ -75,3 +75,5 @@ router.post('/', (req, res) => {
         res.status(500).json({ message: 'Failed to delete pet' });
     });
   });
+
+  module.exports = router;
