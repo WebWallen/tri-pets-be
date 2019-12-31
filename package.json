@@ -2,6 +2,9 @@
   "name": "tri-pets-be",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
   "repository": "https://github.com/WebWallen/tri-pets-be.git",
   "author": "Daniel Wallen <daniel.wallen1987@gmail.com>",
   "license": "MIT",
