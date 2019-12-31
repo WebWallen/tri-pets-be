@@ -20,18 +20,14 @@ function findById(id) {
         .first();
 };
 
-function findDogs(petId) {
+function findDogs() {
     return db('pets')
-        .join('pets', 'pets.id', 'dogs.pet_id')
-        .select('pets.name', 'pets.breed', 'pets.age', 'pets.pet_friendly', 'pets.energy_level', 'pets.shelter_location')
-        .where({ pet_id: petId });
+        .where('species', 'Dog')
 };
 
-function findCats(petId) {
+function findCats() {
     return db('pets')
-        .join('pets', 'pets.id', 'cats.pet_id')
-        .select('pets.name', 'pets.breed', 'pets.age', 'pets.pet_friendly', 'pets.energy_level', 'pets.shelter_location')
-        .where({ pet_id: petId });
+        .where('species', 'Cat')
 };
 
 function add(pet) {
