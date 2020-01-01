@@ -6,12 +6,12 @@ exports.up = function(knex) {
         .notNullable();
         tbl.string('species')
         .notNullable();
+        tbl.string('age');
+        tbl.string('pet_friendly');
+        tbl.string('energy_level');
+        tbl.string('shelter_location');
         tbl.string('breed')
         .notNullable();
-        tbl.integer('age');
-        tbl.string('pet_friendly');
-        tbl.integer('energy_level');
-        tbl.string('shelter_location');
       })
 
       .createTable('dogs', tbl => {
