@@ -1,3 +1,11 @@
+// Perhaps add more tables:
+// 1. Shelters (only ref ID in pets)
+// 2. Breeds
+// 3. Dogs
+// 4. Cats
+// 5. Dog-Breeds
+// 6. Cat-Breeds
+
 exports.up = function(knex) {
     return knex.schema
       .createTable('pets', tbl => {
